@@ -44,8 +44,9 @@ class NewVisitorTest(LiveServerTestCase):  #1
         # "1: Buy peacock feathers" as an item in a to-do list table
         inputbox.send_keys(Keys.ENTER)
         #self.browser.get('http://localhost:8000')
-        self.browser.get(self.live_server_url)
-        
+        #print("Current Url=", self.browser.current_url)
+        self.browser.refresh();
+        #print("Current Url=", self.browser.current_url)
         edith_list_url = self.browser.current_url
         self.assertRegex(edith_list_url, '/lists/.+') #1
         self.check_for_row_in_list_table('1: Buy peacock feathers')
