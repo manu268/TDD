@@ -7,12 +7,13 @@ class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
         #self.browser = webdriver.Firefox(executable_path="C:\Python27\wires.exe")
-        self.browser = webdriver.Firefox(executable_path="C:\Python27\wires.exe")
+        #self.browser = webdriver.Firefox(executable_path="C:\Python27\wires.exe")
+        self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(3)
 
     def tearDown(self):
         #time.sleep(20)
-        print(os.system('tskill plugin-container'))
+        #print(os.system('tskill plugin-container'))
         self.browser.quit()
 
 
